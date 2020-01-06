@@ -1,0 +1,279 @@
+html
+{
+	background-color: #ffffff;
+}-->
+body {
+    font-family: 'Roboto','Ubuntu','Inconsolata', Helvetica, Arial, san-serif;
+}
+
+h1 {
+    margin-top: 15px;
+}
+
+h2 {
+    margin: 5px 0 5px 0;
+    font-weight: 400;
+    padding: 0;
+}
+
+h3 {
+    padding-top: 15px;
+    font-weight: 400;
+}
+
+h4 {  /* only used by abstract */
+    font-weight: 400;
+	margin-bottom:-10px;
+}
+
+
+
+.sidebar {
+    width: 240px;
+    float: left;
+    padding: 15px 15px 0px 30px; /*top right bottom left*/
+    height: 100%
+}
+
+.sidebar img {
+    padding-top: 30px;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.subtitle {
+    font-weight: 300;
+}
+
+.topbar {
+    display: block;
+    width: 100%;
+    height: 90px;
+    margin-left: 240px;
+    padding: 22px 0 0 15px;
+}
+
+.topbar ul {
+    list-style: none;
+    margin: 0;
+}
+
+.topbar ul li {
+    display: block;
+    float: left;
+    margin-right: 50px;
+    font-size: 22px;
+    font-weight: 300;
+    padding-bottom: 10px;
+    color: #0e0d6d;
+}
+
+.topbar ul li:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.topbar li.selected {
+    border-bottom: 2px solid #0e0d6d;
+	font-weight: 300;
+}
+
+.maintext {
+    display: block;
+    margin-left: 240px;
+	margin-top: -10px;
+    padding-left: 50px;
+    font-weight: 300;
+    width: 600px;
+}
+
+.maintext h1 {
+    font-weight: 300;
+    font-size: 25px; /*28*/
+}
+
+.maintext b {
+    font-weight: 400;
+}
+
+.maintext a {
+    color: #182ab2;
+    text-decoration: none;
+}
+
+.maintext a:hover {
+    cursor: pointer;
+    color: black ; /* #83b1f7;*/
+}
+
+.research_list ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 20px; /* 30*/
+}
+
+.research_list ul li {
+    margin-bottom: 5px; /*hange to bring closer (20)*/
+    max-width: 600px;
+}
+
+.research_list .content {
+    font-weight: 300;
+}
+
+.research_list .title {
+    font-weight: 500;
+}
+
+.research_list .tagcell {
+    width: 50px;
+    vertical-align: top;
+}
+
+.research_list .tag {
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    width: 35px;
+    height: 18px;
+    line-height: 18px;
+}
+
+.research_list .conference {
+    background-color: #a81212; 
+}
+
+.research_list .journal {
+    background-color: #0e0d6d;
+}
+
+.research_list .bookchapter {
+    background-color: #ff8c00;
+    
+}
+
+.research_list .thesis {
+    background-color: #e0c604;
+    
+}
+
+.research_list .working {
+    background-color: #606b70;
+}
+
+.ed_list th {
+    font-weight: 300;
+}
+
+.ed_list .title {
+    font-weight: 400;
+}
+
+.ed_list .year {
+    font-weight: 300;
+    padding: 10px;
+    color: white;
+    background-color: #41ab8d;
+    height: 18px;
+    line-height: 18px;
+    margin-right: 10px;
+    font-weight: 400;
+    width: 40px;
+    text-align: center;
+}
+
+.ed_list .blankyear {
+    padding: 10px;
+    margin-right: 10px;
+    width: 40px;
+}
+
+.ed_list ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.ed_list ul li {
+    margin-bottom: 20px;
+}
+
+.ed_list ul li.blankyearlist {
+    margin-bottom: 5px;
+}
+
+.contact_list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact_list ul li {
+    display: block;
+    height: 45px;;
+    padding: 15px;
+}
+
+.contact_list img {
+    float: left;
+    margin-right: 20px;
+}
+/* added next two myself*/
+.contact_list .tag {
+	float:left;   
+	font-weight: 400;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    font-size: 22px;
+    font-weight: 400;
+    width: 24px;
+    height: 18px;
+    line-height: 18px;
+}
+
+.contact_list .contact {
+    background-color: #a81212; /*0e0d6d*/
+	float:left;   
+}
+.contact_list .content {
+	padding: 5px;
+    font-weight: 300;
+}
+
+/* Abstract (also uses h4)*/
+.abstract-state {
+    display: none;
+}
+.abstract-target {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    text-align: justify;
+    padding: 0 1em;
+    border-left: 1px solid #9e9e9e;
+}
+.abstract-state:checked ~ .abstract-wrap .abstract-target {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+}
+.abstract-state ~ .abstract-trigger:before {
+    content: ' \25b7\00a0 abstract ';
+}
+.abstract-state:checked ~ .abstract-trigger:before {
+    content: ' \25bd\00a0 abstract   ';
+}
+.abstract-trigger {
+    cursor: pointer;
+    color: #182ab2;
+    /*font-size: .9em;
+    border-bottom: 1px dashed #9e9e9e;*/
+}
+.abstract-trigger:hover {
+    color: black;
+}

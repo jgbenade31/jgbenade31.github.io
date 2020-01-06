@@ -1,0 +1,81 @@
+#!/usr/bin/python 
+from collections import defaultdict
+import csv, sys, random, math
+
+def printArray(arr):
+	for i in range(len(arr)):
+		print arr[i][:]
+
+def testConnected(arr):
+
+	inserted = [False for i in range(len(arr))]
+	visited = []
+	stack = []
+	stack.append(0)
+	
+	while len(stack) > 0 :
+		#remove first element in list
+		el = stack.pop(0)
+		if  not inserted[el]:
+			inserted[el] = True
+			for i in range(len(arr)):
+				if (arr[el][i] == 1) :
+					stack.append(i)
+			visited.append(el)
+	
+	return len(visited) == len(arr)
+
+	
+def createRandomGraph(n, bandw, prob):
+
+	arr = [[ 0 for i in range(n)] for i in range(n)]
+	numedges = 0
+	
+	for row in range(n):
+		for col in range(row, min(n, row + bandw +1) ):
+			if (abs(row - col) <= bandw and row!=col):
+				if random.random() < prob:
+					numedges = numedges+1
+					arr[row][col] = 1
+					arr[col][row] = 1
+	
+	return (arr	, numedges)
+		
+def main(argv):
+	
+	n = int(argv[1])
+	bandw = int(argv[2])
+	prob = float(argv[3])
+	perm = range(n)
+
+	
+	counter = 0
+	
+	while (counter < 10):
+		(arr, numedges) = createRandomGraph(n,bandw,prob)
+	
+		if testConnected(arr):
+			random.shuffle(perm)
+			
+			fout = 'randomTurner_{0}_{1}_{2}_{3}.d'.format(n ,bandw ,int(math.trunc(100*prob)), counter)
+			counter = counter +1
+
+			with open(fout, 'w') as o:   # open up the output file
+				o.write('c Random graph generated with Turner model\n')
+				o.write('c n={0}, max bandw = {1}, prob = {2}\n'.format(n,bandw,prob))
+				o.write('p edge {0} {1}\n'.format(n, numedges))
+				for i in range(n):
+					for j in range(n):
+						if arr[perm[i]][perm[j]] ==1 and perm[i] < perm[j]:
+							o.write('e {0} {1}\n'.format(perm[i]+1, perm[j]+1))
+				
+				
+			o.close()
+				
+
+    
+if __name__ == '__main__':
+	if len(sys.argv) < 4:
+		print "\nUse as python random_turner.py n k p \n \tn = number of vertices \n\tk = maximum bandwidth\n\tp = probability of edge shorter than k existing\n\nNote that 10 connected graphs will be returned."
+	else:
+		main(sys.argv)
