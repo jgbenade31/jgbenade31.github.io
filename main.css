@@ -135,7 +135,7 @@ h4 {  /* only used by abstract */
 
 .research_list .tag {
     font-weight: 400;
-    text-align: center;
+    text-align: center; 
     color: white;
     padding: 5px;
     font-size: 14px;
@@ -143,6 +143,10 @@ h4 {  /* only used by abstract */
     width: 35px;
     height: 18px;
     line-height: 18px;
+}
+/* trying to left justify on edge */
+.research_list .content {
+    text-align: left; 
 }
 
 .research_list .conference {
