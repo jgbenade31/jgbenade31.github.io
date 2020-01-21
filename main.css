@@ -144,10 +144,7 @@ h4 {  /* only used by abstract */
     height: 18px;
     line-height: 18px;
 }
-/* trying to left justify on edge */
-.research_list .content {
-    text-align: left; 
-}
+
 
 .research_list .conference {
     background-color: #a81212; 
@@ -171,6 +168,15 @@ h4 {  /* only used by abstract */
     background-color: #606b70;
 }
 
+.research_list .unpublished {
+    background-color: #808080;
+}
+
+/* trying to left justify on edge */
+.research_list .content {
+    text-align: left; 
+}
+
 .ed_list th {
     font-weight: 300;
 }
@@ -178,6 +184,8 @@ h4 {  /* only used by abstract */
 .ed_list .title {
     font-weight: 400;
 }
+
+
 
 .ed_list .year {
     font-weight: 300;
