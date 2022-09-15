@@ -84,10 +84,10 @@ h4 {  /* only used by abstract */
 .maintext {
     display: block;
     margin-left: 240px;
-	margin-top: -10px;
+		margin-top: -10px;
     padding-left: 50px;
     font-weight: 300;
-    width: 600px;
+    width: 700px; /*600*/
 }
 
 .maintext h1 {
@@ -117,7 +117,7 @@ h4 {  /* only used by abstract */
 
 .research_list ul li {
     margin-bottom: 5px; /*hange to bring closer (20)*/
-    max-width: 600px;
+    max-width: 700px; /*600, min of this and maintext body width*/
 }
 
 .research_list .content {
@@ -135,7 +135,7 @@ h4 {  /* only used by abstract */
 
 .research_list .tag {
     font-weight: 400;
-    text-align: center; 
+    text-align: center;
     color: white;
     padding: 5px;
     font-size: 14px;
@@ -147,7 +147,7 @@ h4 {  /* only used by abstract */
 
 
 .research_list .conference {
-    background-color: #a81212; 
+    background-color: #a81212;
 }
 
 .research_list .journal {
@@ -156,12 +156,12 @@ h4 {  /* only used by abstract */
 
 .research_list .bookchapter {
     background-color: #ff8c00;
-    
+
 }
 
 .research_list .thesis {
     background-color: #e0c604;
-    
+
 }
 
 .research_list .working {
@@ -174,7 +174,7 @@ h4 {  /* only used by abstract */
 
 /* trying to left justify on edge */
 .research_list .content {
-    text-align: left; 
+    text-align: left;
 }
 
 .ed_list th {
@@ -196,7 +196,7 @@ h4 {  /* only used by abstract */
     line-height: 18px;
     margin-right: 10px;
     font-weight: 400;
-    width: 40px;
+    width: 35px;
     text-align: center;
 }
 
@@ -236,7 +236,7 @@ h4 {  /* only used by abstract */
 }
 /* added next two myself*/
 .contact_list .tag {
-	float:left;   
+	float:left;
 	font-weight: 400;
     text-align: center;
     color: white;
@@ -250,7 +250,7 @@ h4 {  /* only used by abstract */
 
 .contact_list .contact {
     background-color: #a81212; /*0e0d6d*/
-	float:left;   
+	float:left;
 }
 .contact_list .content {
 	padding: 5px;
