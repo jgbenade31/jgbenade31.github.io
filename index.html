@@ -59,6 +59,32 @@
             <h1>Working papers</h1>
             <div class="research_list">
                 <ul>
+				<li><table>
+          	             <tr>
+                            <th class="tagcell">
+                                <div class="tag working">W4</div>
+                            </th>
+                            <th class="content">
+                                <span class="title">On the Existence of Envy-Free Allocations Beyond Additive Valuations</span> <br />
+                                By Gerdus Benad&egrave,  <a href="https://daniel-halpern.com/">Daniel Halpern</a>,  
+                                 <a href="https://www.alexpsomas.com/home">Alex Psomas</a> and <a href="https://sites.google.com/view/paritoshverma/">Paritosh Verma</a>. (Apr 2023) <br />
+          			                [
+                                <input type="checkbox" class="abstract-state" id="abstractW4"/>
+                                <label for="abstractW4" class="abstract-trigger"></label> | <a href="files/23_fba.pdf">paper</a> ]
+                                <div class="abstract-wrap">
+                                    <div class="abstract-target">
+                                        <h4>Abstract</h4>
+                                        <p>
+                                          We study the problem of fairly allocating $m$ indivisible items among $n$ agents. Envy-free allocations, in which each agent prefers her bundle to the bundle of every other agent, need not exist in the worst case. However,   when agents have additive preferences and the value \(v_{i,j}\) of agent \(i\) for item \(j\) is drawn independently from a distribution \(D_i\),  envy-free allocations exist with high probability when \(m \in \Omega( n \log n / \log \log n )\). <br>										  
+											In this paper, we study the existence of envy-free allocations under stochastic valuations far beyond the additive setting. We introduce a new stochastic model in which each agent's valuation is sampled by first fixing a worst-case function, and then drawing a uniformly random renaming of the items, independently for each agent. This strictly generalizes known settings;  for example, \(v_{i,j} \sim D_i\) may be seen as picking a random (instead of a worst-case) additive function before renaming.  <br>	
+											We prove that random renaming is sufficient to ensure that envy-free allocations exist with high probability in very general settings. When valuations are non-negative and ``order-consistent,'' a valuation class that generalizes additive, budget-additive, unit-demand, and single-minded agents, SD-envy-free allocations (a stronger notion of fairness  than envy-freeness) exist for \(m \in \omega(n^2)\) when \(n\) divides \(m\), and SD-EFX allocations exist for all \(m \in \omega(n^2)\). The dependence on \(n\) is tight, that is, for \(m \in O(n^2)\) envy-free allocations don't exist with constant probability.
+											For the case of arbitrary valuations (allowing non-monotone,  negative, or mixed-manna valuations) and \(n=2\) agents, we prove envy-free allocations exist with probability \(1 - \Theta(1/m)\) (and this  is tight).
+                                       </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </table></li>
+					
                   <li><table>
           	             <tr>
                             <th class="tagcell">
@@ -67,7 +93,7 @@
                             <th class="content">
                                 <span class="title">Fair and Efficient Online Allocations</span> <br />
                                 By Gerdus Benad&egrave,  <a href="https://akazachk.github.io/">Aleks Kazachkov</a>, <a href="http://procaccia.info/">Ariel D. Procaccia</a>,
-                                 <a href="https://www.alexpsomas.com/home">Alex Psomas</a> and <a href="http://www.davidzeng.me">David Zeng</a>. (Jun 2022, under review) <br />
+                                 <a href="https://www.alexpsomas.com/home">Alex Psomas</a> and <a href="http://www.davidzeng.me">David Zeng</a>. (Jun 2022, minor revisions) <br />
           			                [
                                 <input type="checkbox" class="abstract-state" id="abstractW3"/>
                                 <label for="abstractW3" class="abstract-trigger"></label> | <a href="files/22_feoa.pdf">paper</a> ]
@@ -75,7 +101,8 @@
                                     <div class="abstract-target">
                                         <h4>Abstract</h4>
                                         <p>
-                                          We study trade-offs between fairness and efficiency when allocating indivisible items online. We attempt to minimize envy, the extent to which any agent prefers another's allocation to their own, while being Pareto efficient. We provide matching lower and upper bounds against a sequence of progressively weaker adversaries. Against worst-case adversaries we find a sharp trade-off: no allocation algorithm can simultaneously provide both non-trivial fairness and non-trivial efficiency guarantees. In a slightly weaker adversary regime where item values are drawn from (potentially correlated) distributions it is possible to achieve the best of both worlds. We give an algorithm that is Pareto efficient ex post and either envy-free up to one good or envy-free with high probability. Neither guarantee can be improved, even in isolation. En route, we give a constructive proof for a structural result of independent interest. Specifically, there always exists a Pareto
+                                          We study trade-offs between fairness and efficiency when allocating indivisible items online. We attempt to minimize envy, the extent to which any agent prefers another's allocation to their own, while being Pareto efficient. We provide matching lower and upper bounds against a sequence of progressively weaker adversaries.  <br>	
+										  Against worst-case adversaries we find a sharp trade-off: no allocation algorithm can simultaneously provide both non-trivial fairness and non-trivial efficiency guarantees. In a slightly weaker adversary regime where item values are drawn from (potentially correlated) distributions it is possible to achieve the best of both worlds. We give an algorithm that is Pareto efficient ex post and either envy-free up to one good or envy-free with high probability. Neither guarantee can be improved, even in isolation. En route, we give a constructive proof for a structural result of independent interest. Specifically, there always exists a Pareto
                 efficient fractional allocation that is strongly envy-free with respect to pairs of agents with substantially different utilities, while allocating identical bundles to agents with identical utilities (up to multiplicative factors).
                                        </div>
                                 </div>
@@ -125,7 +152,7 @@
                                 We outline and demonstrate a data-driven methodology that voting rights advocates can use to compare the likely effectiveness of a single transferable vote system (STV)  to single-member districts (SMD) for securing minority representation in local government.
                                 We incorporate both election data and demographics, and can apply variable assumptions on candidate availability and voter turnout. The core of our STV analysis uses four models of  voter ranking behavior that take racial polarization into account; to assess districts, we use  random district-generation algorithms developed at the MGGG Redistricting Lab.
                                 We demonstrate this method on four case studies: judicial elections in Terrebonne Parish, Louisiana; the county commission of Jones County, North Carolina; and the city councils of  Cincinnati, Ohio and Pasadena, Texas.
-                                We find that STV provides proportional or slightly better representation for the relevant minority group in each case, while districts vary widely in  their eectiveness depending on local circumstances.
+                                We find that STV provides proportional or slightly better representation for the relevant minority group in each case, while districts vary widely in  their effectiveness depending on local circumstances.
                              </div>
                       </div>
                   </th>
@@ -178,7 +205,7 @@
 								<a href="https://witsconf.org/">WITS-2022</a>: Proc. of the 32nd Workshop on Information Technologies and Systems, Dec 2022. (Updated Jan 2023) <br />
           			                [
                                 <input type="checkbox" class="abstract-state" id="abstractC8"/>
-                                <label for="abstractC8" class="abstract-trigger"></label>  | <a href="files/23_stable_recs.pdf">paper</a> ]
+                                <label for="abstractC8" class="abstract-trigger"></label>  | <a href="files/23_stable_recs.pdf">paper</a> ] <!--nachi recording http://formla.org/Schedule_spring2023.html#spring2023_schedule !-->
                                 <div class="abstract-wrap">
                                     <div class="abstract-target">
                                         <h4>Abstract</h4>
