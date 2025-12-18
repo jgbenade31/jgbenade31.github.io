@@ -60,7 +60,7 @@
             <div class="research_list">
                 <ul>
                 </table></li>
-				            <li><table>
+					<li><table>
           	             <tr>
                             <th class="tagcell">
                                 <div class="tag working">W2</div>
@@ -116,6 +116,50 @@
             <h1>Publications</h1>
             <div class="research_list">
                 <ul>
+				<li><table>
+          	             <tr>
+                            <th class="tagcell">
+                                <div class="tag conference">C13</div>
+                            </th>
+                            <th class="content">
+                                <span class="title">Offline Local Search for Online Stochastic Bandits</span> <br />
+                                By Gerdus Benad&egrave,  <a href="https://tlavastida.github.io/">Thomas Lavastida</a> and
+                                 <a href="https://www.rathishdas.com/">Rathish Das</a>. <br />
+          			               <a href="https://www.sigmetrics.org/sigmetrics2026/">SIGMETRICS-26</a>: Proc. of the 37th ACM SIGMETRICS Conference, June 2026. <br /> 
+                                [ <input type="checkbox" class="abstract-state" id="abstractC13"/>
+                                 <label for="abstractC13" class="abstract-trigger"></label> | <a href="files/25_ols.pdf">paper</a>  ] 
+                                <div class="abstract-wrap">
+                                    <div class="abstract-target">
+                                        <h4>Abstract</h4>
+                                        <p> Combinatorial multi-armed bandits provide a fundamental online decision-making environment where a decision-maker interacts with an environment across \(T\) time steps, each time selecting an action and learning the cost of that action. The goal is to minimize regret, defined as the loss compared to the optimal fixed action in hindsight under full-information. There has been substantial interest in leveraging what is known about offline algorithm design in this online setting. Offline greedy and linear optimization algorithms (both exact and approximate) have been shown to provide useful guarantees when deployed online. We investigate local search methods, a broad class of algorithms used widely in both theory and practice, which have thus far been under-explored in this context. We focus on problems where offline local search terminates in an approximately optimal solution and give a generic method for converting such an offline algorithm into an online stochastic combinatorial bandit algorithm with \(O(\log^3(T))\) (approximate) regret. In contrast, existing offline-to-online frameworks yield regret (and approximate regret) which depend sub-linearly but polynomially on \(T\). We demonstrate the flexibility of our framework by applying it to three online stochastic combinatorial optimization problems: scheduling to minimize total completion time, finding a minimum cost base of a matroid and uncertain clustering.
+                                       </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </table></li>
+					<li><table>
+          	             <tr>
+                            <th class="tagcell">
+                                <div class="tag conference">C12</div>
+                            </th>
+                            <th class="content">
+                                <span class="title">Brief announcement: Stochastic parallel scheduling with bandit feedback</span> <br />
+                                By Gerdus Benad&egrave,  <a href="https://tlavastida.github.io/">Thomas Lavastida</a> and
+                                 <a href="https://www.rathishdas.com/">Rathish Das</a>. <br />
+          			               <a href="https://spaa.acm.org/">SPAA-25</a>: Proc. of the 37th ACM Symposium on Parallelism in Algorithms and Architectures, Aug 2025. <br />
+          			                [ <!--https://dl.acm.org/doi/10.1145/3694906.3743344-->
+                                <input type="checkbox" class="abstract-state" id="abstractC12"/>
+                                <label for="abstractC12" class="abstract-trigger"></label> | <a href="files/25_spaa.pdf">SPAA version</a>  ] 
+                                <div class="abstract-wrap">
+                                    <div class="abstract-target">
+                                        <h4>Abstract</h4>
+                                        <p> We study the fundamental problem of scheduling jobs with stochastic sizes to minimize the total completion time for both single and parallel machines. Traditionally, the size distributions are assumed to be known to the scheduler; the challenge is accounting for the stochasticity. Departing from prior work, we explore the problem of efficiently learning to schedule when the size distributions are unknown and we are unable to directly obtain samples from it. We adopt an online bandit learning framework in which an algorithm interacts with a scheduling environment over a series of \(T\) periods. In each period, the algorithm commits to a schedule for 𝑛 stochastic jobs on up to 𝑚 parallel machines and then observes only the random cost of the schedule, and not individual job sizes. This so-called bandit-feedback provides limited information about the underlying (unknown) job size distributions. The objective is to minimize the total regret — the difference in expected total completion time of schedules chosen by the algorithm from that of the optimal schedule under complete information. <br>
+										Standard approaches based on multi-armed bandits are computationally infeasible due to the large space of feasible schedules. Utilizing the structure of the scheduling problem, we give simple, combinatorial, and computationally efficient algorithms for both settings with nearly optimal regret. We guarantee \(O(n^5\sqrt{T\log{T}})\) regret for a single machine and \(O(n^5\sqrt{T\log{T}}/m)\) for parallel machines. Both algorithms have total time complexity \(O(T + n^4)\), or \(O(1)\) amortized per-period complexity for large \(T\). We complement our upper bounds with an almost matching lower bound of \(\Omega(n\sqrt{T})\) for a single machine.
+                                       </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </table></li>
                     <li><table>
           	             <tr>
                             <th class="tagcell">
@@ -210,7 +254,7 @@
                                 By Gerdus Benad&egrave,  <a href="https://directory.smeal.psu.edu/axa60">Aydin Alptekinoglu</a>. <br />
                                 <a href="https://eaamo.org/">EAAMO-2023</a>: Proc. of the 3rd ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization, Oct 2023. <br />  [
                                 <input type="checkbox" class="abstract-state" id="abstractC10"/>
-                                <label for="abstractC10" class="abstract-trigger"></label> |  <a href="files/24_fro.pdf">full paper</a> ]
+                                <label for="abstractC10" class="abstract-trigger"></label> |  <a href="files/24_fro.pdf">full paper</a> | <a href="https://www.youtube.com/watch?v=TZvZ4sd1nO0"> &#127902; 5 min award talk </a> ]
                                 <div class="abstract-wrap">
                                     <div class="abstract-target">
                                         <h4>Abstract</h4>
@@ -236,7 +280,7 @@
                       <a href="http://ec23.sigecom.org/">EC-2023</a>: Proc. of the 24th ACM Conference on Economics and Computation, July 2023. <br />
 			                [
                       <input type="checkbox" class="abstract-state" id="abstractC9"/>
-                      <label for="abstractC9" class="abstract-trigger"></label> | <a href="files/23_gt.pdf">paper</a> ]
+                      <label for="abstractC9" class="abstract-trigger"></label> | <a href="files/23_gt.pdf">paper</a> | <a href="https://www.youtube.com/watch?v=0SKxvUyCyRA"> &#127902; Jamie at EC </a> ]
                       <div class="abstract-wrap">
                           <div class="abstract-target">
                               <h4>Abstract</h4>
