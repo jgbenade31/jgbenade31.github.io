@@ -7,7 +7,8 @@ body {
 }
 
 h1 {
-    margin-top: 15px;
+    margin-top: 5px;
+	margin-bottom: 0px;
 }
 
 h2 {
@@ -112,11 +113,11 @@ h4 {  /* only used by abstract */
 .research_list ul {
     list-style: none;
     padding-left: 0px;
-    margin-bottom: 20px; /* 30*/
+    margin-bottom: 15px; /* 30*/
 }
 
 .research_list ul li {
-    margin-bottom: 5px; /*hange to bring closer (20)*/
+    margin-bottom: 2px; /*hange to bring closer (20)*/
     max-width: 700px; /*600, min of this and maintext body width*/
 }
 
@@ -147,7 +148,7 @@ h4 {  /* only used by abstract */
 
 
 .research_list .conference {
-    background-color: #a81212;
+    background-color: #27ab97;/*#a81212;*/
 }
 
 .research_list .journal {
@@ -160,7 +161,7 @@ h4 {  /* only used by abstract */
 }
 
 .research_list .thesis {
-    background-color: #e0c604;
+    background-color: #a81212; /*#e0c604;*/
 
 }
 

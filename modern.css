@@ -1,0 +1,79 @@
+/* Modern theme — import base styles, then override */
+@import "main.css";
+
+/* ============================
+   Rounded corners on tag boxes
+   ============================ */
+
+/* Paper number tags (W3, J7, C9, etc.) */
+.research_list .tag {
+    border-radius: 4px;
+}
+
+/* Teaching year badges */
+.ed_list .year {
+    border-radius: 4px;
+}
+
+/* Contact icons */
+.contact_list .tag {
+    border-radius: 4px;
+}
+
+/* Subtle transition on hover for all tag-like elements */
+.research_list .tag,
+.ed_list .year,
+.contact_list .tag {
+    transition: opacity 0.15s ease;
+}
+
+/* ============================
+   Category filter bar
+   ============================ */
+
+.category-filters {
+    padding: 0 0 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.category-filters .cat-btn {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.45;
+    transition: opacity 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+    user-select: none;
+}
+
+.category-filters .cat-btn:hover {
+    opacity: 0.55;
+}
+
+.category-filters .cat-btn.active {
+    opacity: 1;
+    box-shadow: 0 0 0 2.5px rgba(0, 0, 0, 0.35);
+    transform: scale(1.04);
+}
+
+/* ============================
+   Category description text
+   ============================ */
+
+.category-description {
+    font-weight: 300;
+    font-style: italic;
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #444;
+    font-size: 15px;
+    display: none; /* hidden by default, shown by JS */
+}

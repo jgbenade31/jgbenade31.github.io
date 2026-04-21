@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 
-<!-- For more information about the template visit http://www.cs.cmu.edu/~nhaghtal/ -->
+<!-- Test version: modern.css + category filtering. Original: index.html + main.css -->
 
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Gerdus Benade - Homepage</title>
-        <link rel="stylesheet" href="main.css">
+        <!-- SWAP: change to main.css to revert to old style -->
+        <link rel="stylesheet" href="modern.css">
         <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500" rel="stylesheet"> -->
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,500" rel="stylesheet">
 		<script type="text/x-mathjax-config">
@@ -56,11 +57,13 @@
 
         </div>
         <div class="maintext" id="research_place">
+            <!-- Category filter bar and description will be injected here by JavaScript -->
+
             <h1>Working papers</h1>
             <div class="research_list">
                 <ul>
                 </table></li>
-				<li><table>
+				<li data-categories="ai,learning,social-choice,optimization"><table>
           	             <tr>
                             <th class="tagcell">
                                 <div class="tag working">W3</div>
@@ -75,13 +78,13 @@
                                     <div class="abstract-target">
                                         <h4>Abstract</h4>
                                         <p>
-                                          Large language models often exhibit increased sycophantic behavior after preference-based posttraining, showing a stronger tendency to affirm a user’s stated or implied belief even when this conflicts with factual accuracy or sound judgment. We present a formal analysis of how alignment from human feedback can increase this failure mode by identifying an explicit amplification mechanism that causally links optimization against a learned reward to bias in the human preference data used for alignment. We show that the direction of behavioral drift is determined by a covariance under the base policy between endorsing the belief signal in the prompt and the learned reward, and that the first-order effect reduces to a simple mean-gap condition. We then analyze reward learning from pairwise comparisons under random utility models like Bradley–Terry and characterize when bias in human annotators’ preferences induces this reward gap. Next, we propose a training-time intervention designed to neutralize the amplification mechanism itself. Among all post-trained policies that prevent sycophantic behavior from increasing, we characterize the unique policy closest in KL divergence to the unconstrained post-trained policy, and derive the corresponding minimal reward correction as a closed-form agreement penalty. Computational experiments find that reward gaps are common and cause behavioral drift in all the configurations considered.
+                                          Large language models often exhibit increased sycophantic behavior after preference-based posttraining, showing a stronger tendency to affirm a user's stated or implied belief even when this conflicts with factual accuracy or sound judgment. We present a formal analysis of how alignment from human feedback can increase this failure mode by identifying an explicit amplification mechanism that causally links optimization against a learned reward to bias in the human preference data used for alignment. We show that the direction of behavioral drift is determined by a covariance under the base policy between endorsing the belief signal in the prompt and the learned reward, and that the first-order effect reduces to a simple mean-gap condition. We then analyze reward learning from pairwise comparisons under random utility models like Bradley–Terry and characterize when bias in human annotators' preferences induces this reward gap. Next, we propose a training-time intervention designed to neutralize the amplification mechanism itself. Among all post-trained policies that prevent sycophantic behavior from increasing, we characterize the unique policy closest in KL divergence to the unconstrained post-trained policy, and derive the corresponding minimal reward correction as a closed-form agreement penalty. Computational experiments find that reward gaps are common and cause behavioral drift in all the configurations considered.
                                         </div>
                                 </div>
                             </th>
                         </tr>
                     </table></li>
-					<li><table>
+					<li data-categories="fair-division"><table>
           	             <tr>
                             <th class="tagcell">
                                 <div class="tag working">W2</div>
@@ -104,7 +107,7 @@
                         </tr>
                     </table></li>
 
-          <li><table>
+          <li data-categories="applications,social-choice"><table>
 	             <tr>
                   <th class="tagcell">
                       <div class="tag working">W1</div>
@@ -130,14 +133,12 @@
                   </th>
               </tr>
           </table></li>
-
-
                 </ul>
             </div>
             <h1>Publications</h1>
             <div class="research_list">
                 <ul>
-				<li><table>
+				<li data-categories="fair-division,applications,journal"><table>
           	             <tr>
 				<th class="tagcell">
                       <div class="tag journal">J7</div>
@@ -164,7 +165,7 @@
                   </th>
               </tr>
                 </table></li>
-				<li><table>
+				<li data-categories="optimization,learning,online"><table>
           	             <tr>
                             <th class="tagcell">
                                 <div class="tag conference">C13</div>
@@ -184,7 +185,7 @@
                             </th>
                         </tr>
                     </table></li>
-					<li><table>
+					<li data-categories="optimization,learning,online"><table>
           	             <tr>
                             <th class="tagcell">
                                 <div class="tag conference">C12</div>
@@ -206,7 +207,7 @@
                             </th>
                         </tr>
                     </table></li>
-                    <li><table>
+                    <li data-categories="fair-division,journal,online"><table>
           	             <tr>
                             <th class="tagcell">
                                 <div class="tag journal">J6</div>
@@ -225,7 +226,7 @@
           								We consider the fundamental problem of fairly and efficiently allocating T indivisible items among n
           								agents with additive preferences. The items become available over a sequence of rounds, and every item
           								must be allocated immediately and irrevocably before the next one arrives. Previous work shows that
-          								when the agents’ valuations for the items are drawn from known distributions, it is possible (under mild
+          								when the agents' valuations for the items are drawn from known distributions, it is possible (under mild
           								technical assumptions) to find allocations that are envy-free with high probability and Pareto efficient
           								ex-post.
           								We study a partial-information setting, where it is possible to elicit ordinal but not cardinal information. When a new item arrives, the algorithm can query each agent for the relative rank of this
@@ -240,7 +241,7 @@
                             </th>
                         </tr>
                     </table></li>
-                <li><table>
+                <li data-categories="fair-division"><table>
           	             <tr>
                             <th class="tagcell">
                                 <div class="tag conference">C11</div>
@@ -266,7 +267,7 @@
                             </th>
                         </tr>
                     </table></li>
-				<li><table>
+				<li data-categories="fair-division,journal,online"><table>
           	             <tr>
                             <th class="tagcell">
                                 <div class="tag journal">J5</div>
@@ -290,7 +291,7 @@
                             </th>
                         </tr>
                     </table></li>
-                    <li><table>
+                    <li data-categories="fair-division,online,applications"><table>
           	             <tr>
                             <th class="tagcell">
                                 <div class="tag conference">C10</div>
@@ -315,7 +316,7 @@
                             </th>
                         </tr>
                     </table></li>
-                    <li><table>
+                    <li data-categories="fair-division,applications"><table>
 	             <tr>
                   <th class="tagcell">
                       <div class="tag conference">C9</div>
@@ -337,7 +338,7 @@
                   </th>
               </tr>
                 </table></li>
-                  <li><table>
+                  <li data-categories="social-choice,applications"><table>
                          <tr>
                             <th class="tagcell">
                                 <div class="tag conference">C8</div>
@@ -347,8 +348,8 @@
                                 By Gerdus Benad&egrave,  Roy Fairstein and <a href="http://www.ise.bgu.ac.il/faculty/kobi/">Ya'akov (Kobi) Gal</a>. <br />
                                 <a href="https://aaai.org/Conferences/AAAI-23/">AAAI-2023</a>: Proc. of the 37th AAAI Conference on Artificial Intelligence, Feb 2023, pp. 5633-5640. <br />
                                 [
-                                <input type="checkbox" class="abstract-state" id="abstractC9"/>
-                                <label for="abstractC9" class="abstract-trigger"></label> | <a href="files/22_pb_stability.pdf">paper</a> ]
+                                <input type="checkbox" class="abstract-state" id="abstractC8"/>
+                                <label for="abstractC8" class="abstract-trigger"></label> | <a href="files/22_pb_stability.pdf">paper</a> ]
                                 <div class="abstract-wrap">
                                     <div class="abstract-target">
                                         <h4>Abstract</h4>
@@ -363,8 +364,8 @@
                                 </div>
                             </th>
                         </tr>
-
-                  <li><table>
+                </table></li>
+                  <li data-categories="fair-division,online"><table>
           	             <tr>
                             <th class="tagcell">
                                 <div class="tag conference">C7</div>
@@ -383,7 +384,7 @@
           								We consider the fundamental problem of fairly and efficiently allocating T indivisible items among n
           								agents with additive preferences. The items become available over a sequence of rounds, and every item
           								must be allocated immediately and irrevocably before the next one arrives. Previous work shows that
-          								when the agents’ valuations for the items are drawn from known distributions, it is possible (under mild
+          								when the agents' valuations for the items are drawn from known distributions, it is possible (under mild
           								technical assumptions) to find allocations that are envy-free with high probability and Pareto efficient
           								ex-post.
           								We study a partial-information setting, where it is possible to elicit ordinal but not cardinal information. When a new item arrives, the algorithm can query each agent for the relative rank of this
@@ -398,7 +399,7 @@
                             </th>
                         </tr>
                     </table></li>
-                  <li><table>
+                  <li data-categories="applications,journal"><table>
                        <tr>
                           <th class="tagcell">
                               <div class="tag journal">J4</div>
@@ -424,7 +425,7 @@
                           </th>
                       </tr>
                   </table></li>
-					<li><table>
+					<li data-categories="social-choice,applications,journal"><table>
                         <tr>
                             <th class="tagcell">
                                 <div class="tag journal">J3</div>
@@ -449,7 +450,7 @@
                             </th>
                         </tr>
                     </table></li>
-					<li><table>
+					<li data-categories="applications,social-choice"><table>
 						<tr>
                             <th class="tagcell">
                                 <div class="tag conference">C6</div>
@@ -471,7 +472,7 @@
 								</th>
 							</tr>
 					</table></li>
-					<li><table>
+					<li data-categories="social-choice,optimization"><table>
                         <tr>
                             <th class="tagcell">
                                 <div class="tag thesis">T2</div>
@@ -484,7 +485,7 @@
                             </th>
                         </tr>
                     </table></li>
-					<li><table>
+					<li data-categories="social-choice"><table>
                         <tr>
                             <th class="tagcell">
                                 <div class="tag conference">C5</div>
@@ -504,7 +505,7 @@
                             </th>
                         </tr>
                     </table></li>
-					<li><table>
+					<li data-categories="fair-division,online"><table>
                         <tr>
                             <th class="tagcell">
                                 <div class="tag conference">C4</div>
@@ -526,7 +527,7 @@
                             </th>
                         </tr>
                     </table></li>
-					<li><table>
+					<li data-categories="optimization,journal"><table>
                         <tr>
                             <th class="tagcell">
                                 <div class="tag journal">J2</div>
@@ -549,7 +550,7 @@
                             </th>
                         </tr>
                     </table></li>
-                    <li><table>
+                    <li data-categories="applications,social-choice"><table>
                       <tr>
                           <th class="tagcell">
                               <div class="tag working">U2</div>
@@ -564,12 +565,12 @@
                                   <div class="abstract-target">
                                       <h4>Abstract</h4>
                                       <p>
-          				                    Participatory  budgeting  is  an  influential  paradigm  that  engages residents in the process of allocating a city’s budget. Different implementations vary in the input format they use to elicit participants’ preferences on potential projects. Our goal is to compare input formats on two dimensions: efficiency, which is measured in terms of the social welfare of the resulting outcomes, and usability, which is evaluated through a combination of objective and subjective indicators. To this end, we conduct an extensive empirical study, in which morethan 1200 voters used different methods in a controlled setting. Our results suggest that a popular input format known as k-approval imposes low cognitive burden and is strikingly efficient, but is not necessarily perceived as such                                 </div>
+          				                    Participatory  budgeting  is  an  influential  paradigm  that  engages residents in the process of allocating a city's budget. Different implementations vary in the input format they use to elicit participants' preferences on potential projects. Our goal is to compare input formats on two dimensions: efficiency, which is measured in terms of the social welfare of the resulting outcomes, and usability, which is evaluated through a combination of objective and subjective indicators. To this end, we conduct an extensive empirical study, in which morethan 1200 voters used different methods in a controlled setting. Our results suggest that a popular input format known as k-approval imposes low cognitive burden and is strikingly efficient, but is not necessarily perceived as such                                 </div>
                               </div>
                           </th>
                       </tr>
                   </table></li>
-				    <li><table>
+				    <li data-categories="social-choice"><table>
                         <tr>
                             <th class="tagcell">
                                 <div class="tag conference">C3</div>
@@ -591,7 +592,7 @@
                             </th>
                         </tr>
                     </table></li>
-					<li><table>
+					<li data-categories="social-choice,applications"><table>
                         <tr>
                             <th class="tagcell">
                                 <div class="tag conference">C2</div>
@@ -614,7 +615,7 @@
                             </th>
                         </tr>
                     </table></li>
-					<li><table>
+					<li data-categories="none"><table>
                         <tr>
                             <th class="tagcell">
                                 <div class="tag working">U1</div>
@@ -641,7 +642,7 @@
                             </th>
                         </tr>
                     </table></li>
-                      <li><table>
+                      <li data-categories="learning,application,journal"><table>
                         <tr>
                             <th class="tagcell">
                                 <div class="tag journal">J1</div>
@@ -649,7 +650,8 @@
                             <th class="content">
                                 <span class="title">Non-Negative Matrix Factorization for Learning Alignment-Specific Models of Protein Evolution</span> <br />
 								By Ben Murrell, Thomas Weighill, Jan Buys, Robert Ketteringham, Sasha Moola, Gerdus Benad&egrave, Lise du Buisson, Daniel Kaliski, Tristan Hands and Konrad Scheffler. <br />
-                                <a href="http://journals.plos.org/plosone/">PLoS ONE</a>: 6 (12) e28898. doi:10.1371/journal.pone.0028898. <br />
+                                <a href="http://journals.plos.org/plosone/">PLoS ONE</a>: 6 (12) e28898. 		   
+. <br />
                                 [
 								<input type="checkbox" class="abstract-state" id="abstractJ1"/>
                                 <label for="abstractJ1" class="abstract-trigger"></label> | <a href="files/11_pone.pdf">paper</a> ]
@@ -663,7 +665,7 @@
 							</th>
                         </tr>
                     </table></li>
-					<li><table>
+					<li data-categories="optimization"><table>
                         <tr>
                             <th class="tagcell">
                                 <div class="tag conference">C1</div>
@@ -685,7 +687,7 @@
                             </th>
                         </tr>
                     </table></li>
-					<li>
+					<li data-categories="none">
                         <table>
                             <tr>
                                 <th class="tagcell">
@@ -821,7 +823,7 @@
                 </ul>
             </div>
 			<p>"These classes are supported by <a href="https://www.datacamp.com/
-"> DataCamp</a>, an intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalized feedback on every exercise.”
+"> DataCamp</a>, an intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalized feedback on every exercise."
   </p>
         </div>
 
@@ -900,6 +902,172 @@
 			$('a[href$=".pdf"]').attr('target', '_blank');
 
         </script>
+
+		<!-- ===== Category Filter Script ===== -->
+		<script>
+		// =====================================================================
+		// CONFIGURATION
+		//
+		// 1) defined_categories: master list of ALL available categories.
+		//    slug:  must match values used in data-categories="..." on <li> elements
+		//    label: button text shown to the user
+		//    color: button background color
+		//    desc:  sentence displayed when this category is selected
+		//
+		// 2) displayed_categories: ordered array of slugs that controls WHICH
+		//    buttons appear and in WHAT ORDER. Only slugs listed here get a
+		//    button. Re-order or remove entries to customise the filter bar.
+		// =====================================================================
+		var defined_categories = [
+		    { slug: "fair-division",
+		      label: "Fair Allocations",
+		      color: "#a81212",
+		      desc: "How should indivisible resources be allocated fairly and efficiently among agents with competing preferences?" },
+		    { slug: "applications",
+		      label: "Applications",
+		      color: "#27ab97",
+		      desc: "Projects motivated by real-world problems like food rescue, gerrymandering and participatory budgeting." },
+		    { slug: "redistricting",
+		      label: "Redistricting",
+		      color: "#27ab97",
+		      desc: "Algorithmic approaches to political redistricting that balance fairness, representation, and optimization." },
+		    { slug: "social-choice",
+		      label: "Social Choice",
+		      color: "#a81212",
+		      desc: "Computational perspectives on aggregating individual preferences into collective decisions." },
+		    { slug: "optimization",
+		      label: "Optimization",
+		      color: "#a81212",
+		      desc: "Discrete optimization, combinatorial bandits, scheduling, and bounding techniques." },
+		    { slug: "learning",
+		      label: "AI / Learning",
+		      color: "#a81212",
+		      desc: "Alignment of AI systems, online learning and ML applications." },
+		    { slug: "journal",
+		      label: "Journal Papers",
+		      color: "#0e0d6d",
+		      // --- desc: "Papers published in peer-reviewed journals." "#27ab97" "#a81212"
+              },
+              { slug: "online",
+		      label: "Online decisions",
+		      color: "##a81212",
+		      desc: "Problems where decisions must be made sequentially without knowledge of the future."
+              }
+		];
+
+		// --- DISPLAY ORDER: only these slugs get buttons, in this order ---
+		var displayed_categories = [
+		    "journal", 
+            "fair-division",
+		    "social-choice",
+		    "optimization", 
+            "applications",		    
+		];
+
+		(function() {
+		    var researchDiv = document.getElementById('research_place');
+		    if (!researchDiv) return;
+
+		    // Build a lookup from slug → category object
+		    var catMap = {};
+		    defined_categories.forEach(function(cat) { catMap[cat.slug] = cat; });
+
+		    // --- Build filter bar ---
+		    var filterBar = document.createElement('div');
+		    filterBar.className = 'category-filters';
+
+		    // --- Build description paragraph (hidden by default via CSS) ---
+		    var descEl = document.createElement('p');
+		    descEl.className = 'category-description';
+		    descEl.textContent = '';
+
+		    // Only create buttons for slugs listed in displayed_categories, in order
+		    displayed_categories.forEach(function(slug) {
+		        var cat = catMap[slug];
+		        if (!cat) return; // skip if slug not defined
+
+		        var btn = document.createElement('span');
+		        btn.className = 'cat-btn';
+		        btn.setAttribute('data-cat', cat.slug);
+		        btn.textContent = cat.label;
+		        btn.style.backgroundColor = cat.color;
+
+		        btn.addEventListener('click', function() {
+		            var wasActive = btn.classList.contains('active');
+
+		            // Deactivate all buttons
+		            filterBar.querySelectorAll('.cat-btn').forEach(function(b) {
+		                b.classList.remove('active');
+		            });
+
+		            if (wasActive) {
+		                showAllPapers();
+		                descEl.style.display = 'none';
+		                descEl.textContent = '';
+		            } else {
+		                btn.classList.add('active');
+		                filterPapers(cat.slug);
+		                descEl.textContent = cat.desc;
+		                descEl.style.display = 'block';
+		            }
+		        });
+
+		        filterBar.appendChild(btn);
+		    });
+
+		    // Insert filter bar and description at the top of #research_place
+		    var firstChild = researchDiv.firstChild;
+		    researchDiv.insertBefore(descEl, firstChild);
+		    researchDiv.insertBefore(filterBar, descEl);
+
+		    // --- Collect section pairs: each h1 and its following .research_list ---
+		    function getSections() {
+		        var sections = [];
+		        var headers = researchDiv.querySelectorAll('h1');
+		        headers.forEach(function(h) {
+		            var rl = h.nextElementSibling;
+		            if (rl && rl.classList.contains('research_list')) {
+		                sections.push({ header: h, list: rl });
+		            }
+		        });
+		        return sections;
+		    }
+
+		    // --- Show all papers and all section headers ---
+		    function showAllPapers() {
+		        researchDiv.querySelectorAll('.research_list ul li').forEach(function(li) {
+		            li.style.display = '';
+		        });
+		        getSections().forEach(function(sec) {
+		            sec.header.style.display = '';
+		            sec.list.style.display = '';
+		        });
+		    }
+
+		    // --- Filter papers; hide section header if it has zero visible papers ---
+		    function filterPapers(slug) {
+		        // First, show/hide individual papers
+		        researchDiv.querySelectorAll('.research_list ul li').forEach(function(li) {
+		            var catsAttr = li.getAttribute('data-categories');
+		            if (!catsAttr) { li.style.display = 'none'; return; }
+		            var cats = catsAttr.split(',');
+		            var match = cats.some(function(c) { return c.trim() === slug; });
+		            li.style.display = match ? '' : 'none';
+		        });
+
+		        // Then, hide any section header whose list has zero visible papers
+		        getSections().forEach(function(sec) {
+		            var items = sec.list.querySelectorAll('ul li');
+		            var anyVisible = false;
+		            items.forEach(function(li) {
+		                if (li.style.display !== 'none') anyVisible = true;
+		            });
+		            sec.header.style.display = anyVisible ? '' : 'none';
+		            sec.list.style.display = anyVisible ? '' : 'none';
+		        });
+		    }
+		})();
+		</script>
 
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
